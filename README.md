@@ -64,19 +64,16 @@ print(state)
 
 **Example Output:**
 ```python
-{
-    'power': True,
-    'power_str': 'ON',
-    'mode': 1,
-    'mode_str': 'Cool',
-    'temp': 24,
-    'fan': 0,
-    'fan_str': 'Auto',
-    'timers': {
-        'on_hours': 0.0,
-        'off_hours': 0.0
-    }
-}
+SamsungACState(
+    power=True,
+    power_str='ON',
+    mode=1,
+    mode_str='Cool',
+    temp=24,
+    fan=0,
+    fan_str='Auto',
+    timers=SamsungACTimers(on_hours=0.0, off_hours=0.0)
+)
 ```
 
 ## Verified Devices

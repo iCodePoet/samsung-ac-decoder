@@ -1,6 +1,6 @@
-# Samsung AC IR Dual-Timer Protocol 🕵️‍♂️❄️
+# Samsung AC IR Decoder 🕵️‍♂️❄️
 
-Reverse engineering the obscure dual-timer (On/Off) binary compression algorithm used by Samsung Air Conditioner IR remotes.
+A Python package for decoding Samsung Air Conditioner IR remote payloads, featuring a complete reverse-engineered algorithm for their obscure dual-timer (On/Off) binary compression.
 
 ## Disclaimer / Limitations
 ⚠️ **Note:** This protocol was entirely reverse-engineered through observation. While it has been tested on the models listed below, **there is no guarantee that it works perfectly or reliably even for those specific devices**, let alone other Samsung AC models or edge cases. There may be additional hidden flags or behaviors in other bytes that we have yet to discover. Use this library strictly at your own risk and feel free to contribute if you find discrepancies!

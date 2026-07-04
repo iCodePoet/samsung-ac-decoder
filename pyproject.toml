@@ -9,8 +9,8 @@ description = "A decoder for Samsung Air Conditioner dual-timer IR payloads"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [
-    { name = "jay-flow", email = "jay-flow@example.com" }
+    { name = "iCodePoet", email = "icodepoet@example.com" }
 ]
 
 [project.urls]
-Homepage = "https://github.com/jay-flow/samsung-ac-decoder"
+Homepage = "https://github.com/iCodePoet/samsung-ac-decoder"

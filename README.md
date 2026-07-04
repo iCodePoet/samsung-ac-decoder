@@ -94,3 +94,7 @@ Discovered while building a custom local IR bridge for Hermes Agent. Feel free t
 
 ## Disclaimer / Limitations
 ⚠️ **Note:** This protocol was entirely reverse-engineered through observation. While it works flawlessly for the tested models, it may not be 100% accurate for all Samsung AC models or edge cases. There may be additional hidden flags or behaviors in other bytes that we have yet to discover. Use this library at your own risk and feel free to contribute if you find discrepancies!
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+You are free to use, modify, and distribute this software, but it is provided "AS IS" with absolutely no liability or warranty.

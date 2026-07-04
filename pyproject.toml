@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "samsung-ac-ir-timer"
+name = "samsung-ac-decoder"
 version = "0.1.0"
 description = "A decoder for Samsung Air Conditioner dual-timer IR payloads"
 readme = "README.md"
@@ -13,4 +13,4 @@ authors = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jay-flow/samsung-ac-ir-timer-protocol"
+Homepage = "https://github.com/jay-flow/samsung-ac-decoder"

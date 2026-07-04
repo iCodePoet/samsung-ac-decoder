@@ -36,3 +36,42 @@ def decode_samsung_timers(bytes_arr: List[int]) -> Optional[Dict[str, float]]:
         "on_hours": on_hours,
         "off_hours": off_hours
     }
+
+MODE_LABELS = {0: "자동", 1: "냉방", 2: "제습", 3: "송풍", 4: "난방", 8: "자동(구형)"}
+FAN_LABELS = {0: "자동풍", 2: "1단", 4: "2단", 5: "3단"}
+
+def decode_samsung_ac_state(bytes_arr: List[int]) -> Optional[Dict[str, any]]:
+    """
+    Decodes the full state (power, mode, temp, fan, timers) from a Samsung AC IR payload.
+    
+    Args:
+        bytes_arr (List[int]): An array of integers representing the raw IR bytes.
+        
+    Returns:
+        Optional[Dict[str, any]]: A dictionary containing the decoded state.
+    """
+    if len(bytes_arr) < 14:
+        return None
+        
+    data_idx = len(bytes_arr) - 7
+    temp = ((bytes_arr[data_idx + 4] >> 4) & 0x0F) + 16
+    fan = (bytes_arr[data_idx + 5] >> 1) & 0x07
+    mode = (bytes_arr[data_idx + 5] >> 4) & 0x07
+    power = (bytes_arr[data_idx + 6] >> 4) & 0x03
+    
+    state = {
+        "power": power == 3,
+        "power_str": {0: "꺼짐(OFF)", 3: "켜짐(ON)"}.get(power, f"Unknown({power})"),
+        "mode": mode,
+        "mode_str": MODE_LABELS.get(mode, str(mode)),
+        "temp": temp,
+        "fan": fan,
+        "fan_str": FAN_LABELS.get(fan, str(fan)),
+        "timers": None
+    }
+    
+    if len(bytes_arr) >= 21:
+        state["timers"] = decode_samsung_timers(bytes_arr)
+        
+    return state
+

@@ -37,8 +37,8 @@ def decode_samsung_timers(bytes_arr: List[int]) -> Optional[Dict[str, float]]:
         "off_hours": off_hours
     }
 
-MODE_LABELS = {0: "자동", 1: "냉방", 2: "제습", 3: "송풍", 4: "난방", 8: "자동(구형)"}
-FAN_LABELS = {0: "자동풍", 2: "1단", 4: "2단", 5: "3단"}
+MODE_LABELS = {0: "Auto", 1: "Cool", 2: "Dry", 3: "Fan", 4: "Heat", 8: "Auto (Legacy)"}
+FAN_LABELS = {0: "Auto", 2: "Low", 4: "Med", 5: "High"}
 
 def decode_samsung_ac_state(bytes_arr: List[int]) -> Optional[Dict[str, any]]:
     """
@@ -61,7 +61,7 @@ def decode_samsung_ac_state(bytes_arr: List[int]) -> Optional[Dict[str, any]]:
     
     state = {
         "power": power == 3,
-        "power_str": {0: "꺼짐(OFF)", 3: "켜짐(ON)"}.get(power, f"Unknown({power})"),
+        "power_str": {0: "OFF", 3: "ON"}.get(power, f"Unknown({power})"),
         "mode": mode,
         "mode_str": MODE_LABELS.get(mode, str(mode)),
         "temp": temp,

@@ -93,7 +93,7 @@ This reverse engineering was tested and verified to work flawlessly on the follo
 Discovered while building a custom local IR bridge for Hermes Agent. Feel free to use this algorithm to implement full dual-timer support in your own open-source IR libraries!
 
 ## Disclaimer / Limitations
-⚠️ **Note:** This protocol was entirely reverse-engineered through observation. While it works flawlessly for the tested models, it may not be 100% accurate for all Samsung AC models or edge cases. There may be additional hidden flags or behaviors in other bytes that we have yet to discover. Use this library at your own risk and feel free to contribute if you find discrepancies!
+⚠️ **Note:** This protocol was entirely reverse-engineered through observation. While it has been tested on the models listed above, **there is no guarantee that it works perfectly or reliably even for those specific devices**, let alone other Samsung AC models or edge cases. There may be additional hidden flags or behaviors in other bytes that we have yet to discover. Use this library strictly at your own risk and feel free to contribute if you find discrepancies!
 
 ## License
 This project is licensed under the [MIT License](LICENSE).

@@ -83,5 +83,11 @@ sample_bytes[11] = 0x00
 decode_samsung_timers(sample_bytes)
 ```
 
+## Verified Devices
+
+This reverse engineering was tested and verified to work flawlessly on the following hardware:
+- **Samsung WindFree™ 1-Way Cassette** 
+  - Model Numbers: `AC009BN1DCH` (9K Btu), `AC012BN1DCH` (12K Btu), `AC018BN1DCH` (18K Btu)
+
 ## Contribution
 Discovered while building a custom local IR bridge for Hermes Agent. Feel free to use this algorithm to implement full dual-timer support in your own open-source IR libraries!
